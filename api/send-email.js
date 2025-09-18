@@ -30,13 +30,23 @@ function formatDateET(date) {
 }
 
 /**
- * Handler for form submissions
+ * Vercel serverless function handler for form submissions
  * @param {Object} req - The request object
  * @param {Object} res - The response object
  */
-exports.handler = async (req, res) => {
+module.exports = async (req, res) => {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   console.log('📨 Form submission received at', formatDateET(new Date()));
-  
+
   // Only allow POST requests
   if (req.method !== 'POST') {
     console.log('❌ Method not allowed:', req.method);
