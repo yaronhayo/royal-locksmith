@@ -1,0 +1,254 @@
+// Import required dependencies
+const { Resend } = require('resend');
+require('dotenv').config();
+
+// Initialize Resend with API key from environment variables
+const resend = new Resend(process.env.RESEND_API_KEY);
+console.log('Resend API key loaded:', process.env.RESEND_API_KEY ? '✓ API key exists' : '⨯ API key missing');
+
+/**
+ * Format a date in Eastern Time (ET)
+ * @param {Date} date - The date to format
+ * @returns {string} - Formatted date string in ET
+ */
+function formatDateET(date) {
+  return new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: true
+  }).format(date);
+}
+
+/**
+ * Handler for form submissions
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object
+ */
+exports.handler = async (req, res) => {
+  console.log('📨 Form submission received at', formatDateET(new Date()));
+  
+  // Only allow POST requests
+  if (req.method !== 'POST') {
+    console.log('❌ Method not allowed:', req.method);
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    // Extract form data from request body
+    const formData = req.body;
+    console.log('📝 Form data received:', JSON.stringify(formData, null, 2));
+    
+    // Extract user and session data
+    const userAgent = req.headers['user-agent'] || 'Unknown';
+    const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const referrer = req.headers.referer || 'Direct';
+    
+    // Get URL parameters for tracking
+    let url;
+    try {
+      url = new URL(req.headers.referer || 'https://royallocksmithnj.com');
+      console.log('🔗 Referrer URL parsed:', url.toString());
+    } catch (urlError) {
+      console.error('❌ Error parsing referrer URL:', urlError);
+      url = new URL('https://royallocksmithnj.com');
+    }
+    
+    const utmSource = url.searchParams.get('utm_source') || 'none';
+    const utmMedium = url.searchParams.get('utm_medium') || 'none';
+    const utmCampaign = url.searchParams.get('utm_campaign') || 'none';
+    const keywords = url.searchParams.get('keywords') || 'none';
+    
+    // Current time in Eastern Time
+    const currentTimeET = formatDateET(new Date());
+    
+    // Create formatted HTML for form data
+    let formDataHtml = '<h3>Form Submission Details:</h3><table style="width:100%; border-collapse: collapse;">';
+    
+    for (const [key, value] of Object.entries(formData)) {
+      if (key !== 'recaptcha') { // Exclude recaptcha token
+        formDataHtml += `<tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">${key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}</td>
+          <td style="padding: 8px; text-align: left;">${value}</td>
+        </tr>`;
+      }
+    }
+    
+    formDataHtml += '</table>';
+    
+    // Create formatted HTML for user data
+    const userDataHtml = `
+      <h3>User & Session Data:</h3>
+      <table style="width:100%; border-collapse: collapse;">
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">IP Address</td>
+          <td style="padding: 8px; text-align: left;">${ipAddress}</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">User Agent</td>
+          <td style="padding: 8px; text-align: left;">${userAgent}</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">Referrer</td>
+          <td style="padding: 8px; text-align: left;">${referrer}</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">UTM Source</td>
+          <td style="padding: 8px; text-align: left;">${utmSource}</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">UTM Medium</td>
+          <td style="padding: 8px; text-align: left;">${utmMedium}</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">UTM Campaign</td>
+          <td style="padding: 8px; text-align: left;">${utmCampaign}</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">Keywords</td>
+          <td style="padding: 8px; text-align: left;">${keywords}</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="padding: 8px; text-align: left; font-weight: bold;">Form Submission Time (ET)</td>
+          <td style="padding: 8px; text-align: left;">${currentTimeET}</td>
+        </tr>
+      </table>
+    `;
+    
+    // Create beautiful email template
+    const emailHtml = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Contact Form Submission</title>
+        <style>
+          @media only screen and (max-width: 600px) {
+            .container {
+              width: 100% !important;
+              padding: 10px !important;
+            }
+            .content {
+              padding: 15px !important;
+            }
+            .header {
+              padding: 15px !important;
+            }
+            .footer {
+              padding: 15px !important;
+            }
+            h1 {
+              font-size: 22px !important;
+            }
+            h2 {
+              font-size: 20px !important;
+            }
+            h3 {
+              font-size: 18px !important;
+            }
+          }
+        </style>
+      </head>
+      <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; color: #333;">
+        <div class="container" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 20px; margin-bottom: 20px;">
+          <!-- Header -->
+          <div class="header" style="background-color: #221f1f; padding: 25px; text-align: center;">
+            <img src="https://mtbgayqzjrxjjmsjikcg.supabase.co/storage/v1/object/public/royallocksmith/Royal%20Locksmith%20Logo%202.png" alt="Royal Locksmith" style="max-width: 200px;">
+          </div>
+          
+          <!-- Content -->
+          <div class="content" style="padding: 30px; background-color: #ffffff;">
+            <h1 style="color: #221f1f; margin-top: 0; margin-bottom: 20px; text-align: center; font-size: 24px;">New Form Submission Received</h1>
+            <p style="font-size: 16px; line-height: 1.6; margin-bottom: 25px; color: #666;">A new customer has submitted the contact form on the Royal Locksmith website. Details are provided below:</p>
+            
+            <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 25px; border-left: 4px solid #ea9e25;">
+              ${formDataHtml}
+            </div>
+            
+            <div style="background-color: #f8f9fa; border-radius: 8px; padding: 20px; border-left: 4px solid #221f1f;">
+              ${userDataHtml}
+            </div>
+          </div>
+          
+          <!-- Footer -->
+          <div class="footer" style="background-color: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #eee;">
+            <p style="margin: 0; color: #666; font-size: 14px;">&copy; ${new Date().getFullYear()} Royal Locksmith | NJ DCA License #13VH13550300</p>
+            <p style="margin-top: 5px; color: #999; font-size: 12px;">All timestamps are in Eastern Time (ET).</p>
+            <p style="margin-top: 5px; color: #999; font-size: 12px;">This is an automated notification from your website.</p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+    
+    // Determine form type and create suitable subject line
+    const formType = formData.service ? 'Service Request' : 'Contact';
+    const subjectLine = formData.emergency === 'on' 
+      ? `🚨 URGENT: New ${formType} Form Submission - Royal Locksmith` 
+      : `New ${formType} Form Submission - Royal Locksmith`;
+    
+    console.log('✉️ Preparing to send email with Resend API');
+    console.log('📧 Email to:', 'yaron@gettmarketing.com');
+    console.log('📧 Email subject:', subjectLine);
+    
+    // Send email using Resend
+    try {
+      // First, try with the proper domain
+      const { data, error } = await resend.emails.send({
+        from: 'Royal Locksmith <noreply@royallocksmithnj.com>',
+        to: 'yaron@gettmarketing.com',
+        subject: subjectLine,
+        html: emailHtml,
+        reply_to: formData.email || 'noreply@royallocksmithnj.com'
+      });
+      
+      if (error) {
+        console.error('❌ Error sending email with verified domain:', error);
+        
+        // Try again with Resend's default domain as fallback
+        console.log('🔄 Attempting fallback with Resend default domain...');
+        const fallbackResult = await resend.emails.send({
+          from: 'Royal Locksmith <onboarding@resend.dev>',
+          to: 'yaron@gettmarketing.com',
+          subject: subjectLine + ' (via Resend)',
+          html: emailHtml,
+          reply_to: formData.email || 'noreply@royallocksmithnj.com'
+        });
+        
+        if (fallbackResult.error) {
+          console.error('❌ Fallback also failed:', fallbackResult.error);
+          return res.status(500).json({ error: 'Failed to send email notification after multiple attempts' });
+        }
+        
+        console.log('✅ Email sent successfully using fallback!', fallbackResult.data);
+        return res.status(200).json({ 
+          success: true, 
+          message: 'Form submitted successfully (fallback method)', 
+          emailId: fallbackResult.data?.id || 'no-id-returned',
+          note: 'Used fallback sending method'
+        });
+      }
+      
+      console.log('✅ Email sent successfully!', data);
+      
+      // Return success response
+      return res.status(200).json({ 
+        success: true, 
+        message: 'Form submitted successfully', 
+        emailId: data?.id || 'no-id-returned' 
+      });
+    } catch (resendError) {
+      console.error('💥 Exception in Resend API call:', resendError);
+      return res.status(500).json({ error: 'Exception when sending email: ' + resendError.message });
+    }
+    
+  } catch (error) {
+    console.error('💥 Server error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
+  }
+}; 

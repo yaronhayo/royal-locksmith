@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NPQFMXP9');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found | Royal Locksmith in Hackensack, NJ">
+    <meta name="robots" content="noindex, follow">
+    <title>404 Page Not Found | Royal Locksmith Hackensack NJ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png">
+    <link rel="apple-touch-icon" href="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png">
+    
+    <style>
+        /* Header Contact Styling */
+        .header-contact-item {
+            font-size: 1.1rem;
+        }
+        .header-highlight {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #ea9e25;
+        }
+        .header-phone {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: #ea9e25;
+            transition: all 0.3s ease;
+        }
+        .header-phone:hover {
+            color: #c78000;
+            text-shadow: 0 0 5px rgba(234, 158, 37, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* Update CSS for the mobile header layout changes */
+        @media (max-width: 991px) {
+            header .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .mobile-nav-toggle {
+                order: 3;
+                margin-left: 10px;
+                font-size: 1.2rem;
+                padding: 6px 8px;
+            }
+            
+            .logo {
+                order: 1;
+                margin: 0;
+                max-width: 45%;
+            }
+            
+            .logo img {
+                max-width: 100%;
+            }
+            
+            .mobile-header-phone {
+                order: 2;
+                display: flex;
+                align-items: center;
+                margin: 0;
+                margin-left: auto;
+                margin-right: 10px;
+            }
+            
+            .mobile-header-phone a {
+                display: flex;
+                align-items: center;
+                color: #ea9e25;
+                font-weight: bold;
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+            
+            .mobile-header-phone i {
+                margin-right: 0.3rem;
+                font-size: 1.2rem;
+            }
+            
+            /* Hide header contact items on mobile since we have the new phone display */
+            .header-contact {
+                display: none;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .mobile-header-phone {
+                display: none;
+            }
+        }
+        
+        /* 404 Page Styling */
+        .error-content {
+            padding: 80px 0;
+            position: relative;
+            background-color: #f8f9fa;
+        }
+        
+        .error-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid #ea9e25;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            color: #ea9e25;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .error-code::before, .error-code::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background-color: #221f1f;
+            border-radius: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .error-code::before {
+            left: 28%;
+        }
+        
+        .error-code::after {
+            right: 28%;
+        }
+        
+        .key-animation {
+            display: inline-block;
+            animation: keyJiggle 3s ease-in-out infinite;
+            transform-origin: 50% 50%;
+        }
+        
+        @keyframes keyJiggle {
+            0%, 100% { transform: rotate(0deg); }
+            10% { transform: rotate(-5deg); }
+            20% { transform: rotate(3deg); }
+            30% { transform: rotate(-3deg); }
+            40% { transform: rotate(2deg); }
+            50% { transform: rotate(0deg); }
+        }
+        
+        .lock-icon {
+            font-size: 5rem;
+            color: #221f1f;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .lock-animation {
+            animation: lockShake 5s ease-in-out infinite;
+        }
+        
+        @keyframes lockShake {
+            0%, 100% { transform: translateX(0); }
+            85% { transform: translateX(0); }
+            90% { transform: translateX(-5px); }
+            95% { transform: translateX(5px); }
+            97% { transform: translateX(-3px); }
+            99% { transform: translateX(3px); }
+        }
+        
+        .error-heading {
+            font-size: 2.5rem;
+            color: #221f1f;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .error-message {
+            color: #6c757d;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .locksmith-joke {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .joke-wrapper {
+            position: relative;
+        }
+        
+        .joke-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+        
+        .joke-source {
+            font-size: 0.9rem;
+            text-align: right;
+            color: #aaa;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        
+        .quote-icon {
+            font-size: 2rem;
+            color: #ea9e25;
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+        
+        .error-action {
+            margin-top: 30px;
+        }
+        
+        .btn-return {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin: 0 10px 10px;
+        }
+        
+        .services-link {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #221f1f;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .services-link:hover {
+            color: #ea9e25;
+            transform: translateX(5px);
+        }
+        
+        .services-link i {
+            margin-left: 8px;
+            color: #ea9e25;
+        }
+        
+        /* Key illustration */
+        .key-illustration {
+            position: relative;
+            width: 100%;
+            height: 80px;
+            margin: 20px 0;
+        }
+        
+        .key-path {
+            position: absolute;
+            height: 2px;
+            top: 50%;
+            left: 10%;
+            right: 10%;
+            background-color: #ddd;
+            z-index: 1;
+        }
+        
+        .key-symbol {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            color: #ea9e25;
+            z-index: 2;
+            padding: 0 10px;
+            background-color: white;
+        }
+        
+        .destination {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #221f1f;
+            z-index: 2;
+            padding: 0 5px;
+            background-color: white;
+        }
+        
+        .origin {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #221f1f;
+            z-index: 2;
+            padding: 0 5px;
+            background-color: white;
+        }
+        
+        /* Additional animations */
+        .bounce-in {
+            animation: bounceIn 1s;
+        }
+        
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+            0% {transform: scale3d(.3, .3, .3);}
+            20% {transform: scale3d(1.1, 1.1, 1.1);}
+            40% {transform: scale3d(.9, .9, .9);}
+            60% {transform: scale3d(1.03, 1.03, 1.03);}
+            80% {transform: scale3d(.97, .97, .97);}
+            100% {transform: scale3d(1, 1, 1);}
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPQFMXP9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png" alt="Royal Locksmith" class="site-logo">
+                </a>
+            </div>
+            
+            <!-- Mobile Header Phone -->
+            <div class="mobile-header-phone">
+                <a href="tel:5512928090">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>(551) 292-8090</span>
+                </a>
+            </div>
+            
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="areas.html">Service Areas</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Header Contact Info (hidden on mobile) -->
+            <div class="header-contact">
+                <div class="header-contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="header-highlight">24/7 Service</span>
+                </div>
+                <div class="header-contact-item phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span><a href="tel:5512928090" class="header-phone">(551) 292-8090</a></span>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="error-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="error-card">
+                        <i class="fas fa-lock lock-icon lock-animation"></i>
+                        <h1 class="error-code"><span class="key-animation">4</span>0<span class="key-animation">4</span></h1>
+                        <h2 class="error-heading bounce-in">Oops! This Page is Locked Out</h2>
+                        <p class="error-message">It looks like you've tried to access a page that doesn't exist or has been moved.</p>
+                        
+                        <div class="key-illustration">
+                            <div class="key-path"></div>
+                            <div class="origin">You</div>
+                            <div class="key-symbol"><i class="fas fa-key"></i></div>
+                            <div class="destination">Page</div>
+                        </div>
+                        
+                        <div class="locksmith-joke">
+                            <div class="joke-wrapper">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p class="joke-text">Why was the locksmith late to work? He got locked out of his car!</p>
+                                <p class="joke-source">- Locksmith Humor</p>
+                            </div>
+                        </div>
+                        
+                        <div class="locksmith-joke">
+                            <div class="joke-wrapper">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p class="joke-text">What's a locksmith's favorite place to eat? A key-bab shop!</p>
+                                <p class="joke-source">- Terrible Locksmith Puns</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-warning d-flex align-items-center mt-4" role="alert">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            <div>
+                                Don't worry! We can help you find your way back.
+                            </div>
+                        </div>
+                        
+                        <div class="error-action">
+                            <a href="index.html" class="btn btn-primary btn-return">
+                                <i class="fas fa-home me-2"></i> Go to Homepage
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-primary btn-return">
+                                <i class="fas fa-envelope me-2"></i> Contact Us
+                            </a>
+                        </div>
+                        
+                        <a href="services.html" class="services-link">
+                            View Our Emergency Lockout Services <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png" alt="Royal Locksmith" class="footer-logo-img">
+                        </a>
+                    </div>
+                    <p><i class="fas fa-map-marker-alt"></i> Serving Hackensack, NJ & Surrounding Areas</p>
+                    <p><i class="fas fa-id-card"></i> NJ DCA License #13VH13550300</p>
+                    
+                    <div class="footer-emergency">
+                        <h4>Need Emergency Service?</h4>
+                        <a href="tel:5512928090" class="btn btn-primary"><i class="fas fa-phone-alt me-2"></i> Call (551) 292-8090</a>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <h3>Connect With Us</h3>
+                        <div class="footer-social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-yelp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:5512928090">(551) 292-8090</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:support@royallocksmithnj.com">support@royallocksmithnj.com</a></p>
+                    <p><i class="fas fa-clock"></i> Available 24/7</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="areas.html"><i class="fas fa-chevron-right"></i> Service Areas</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-areas">
+                    <h3>Service Areas</h3>
+                    <p><i class="fas fa-map-pin"></i> Hackensack, NJ</p>
+                    <p><i class="fas fa-map-pin"></i> Lodi, NJ</p>
+                    <p><i class="fas fa-map-pin"></i> Teaneck, NJ</p>
+                    <p><i class="fas fa-map-pin"></i> Maywood, NJ</p>
+                    <p><i class="fas fa-map-pin"></i> South Hackensack, NJ</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Royal Locksmith. All Rights Reserved.</p>
+                <div class="footer-policies">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms and Conditions</a>
+                </div>
+                <p class="footer-credit">Made with <i class="fas fa-heart heart-icon"></i> by <a href="https://gettmarketing.com" target="_blank">Gett Marketing</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="services.html">
+            <i class="fas fa-key"></i>
+            <span>Services</span>
+        </a>
+        <a href="tel:5512928090" class="call-now">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="areas.html">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Areas</span>
+        </a>
+        <a href="about.html">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </a>
+        <a href="contact.html">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Fixed CTA Button -->
+    <a href="tel:+15512928090" class="fixed-cta-btn">
+        <i class="fas fa-phone-alt"></i> Call Now
+    </a>
+</body>
+</html> 

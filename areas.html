@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NPQFMXP9');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Licensed Locksmith serving Hackensack, Lodi, Teaneck, Maywood, South Hackensack and all Bergen County, NJ. 24/7 mobile locksmith services for emergencies, residential & commercial security needs.">
+    <meta name="keywords" content="locksmith Hackensack, locksmith Lodi, locksmith Teaneck, locksmith Maywood, locksmith South Hackensack, Bergen County locksmith, 24/7 mobile locksmith, emergency locksmith near me, residential locksmith service, commercial locksmith service, automotive locksmith service">
+    <title>Mobile Locksmith Services in Hackensack, Lodi, Teaneck & Bergen County NJ | Royal Locksmith</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png">
+    <link rel="apple-touch-icon" href="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png">
+    
+    <!-- Twitter Card / Social Media Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mobile Locksmith Services in Hackensack, Lodi, Teaneck & Bergen County NJ">
+    <meta name="twitter:description" content="Professional mobile locksmith serving Hackensack, Lodi, Teaneck, Maywood, South Hackensack, and all Bergen County. Available 24/7 for locksmith emergencies.">
+    <meta name="twitter:image" content="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png">
+    <meta property="og:image" content="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png">
+    <meta property="og:title" content="Mobile Locksmith Services in Hackensack, Lodi, Teaneck & Bergen County NJ">
+    <meta property="og:description" content="Professional mobile locksmith serving Hackensack, Lodi, Teaneck, Maywood, South Hackensack, and all Bergen County. Available 24/7 for locksmith emergencies.">
+    <meta property="og:type" content="website">
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Royal Locksmith",
+      "image": "https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png",
+      "url": "https://royallocksmithnj.com/areas.html",
+      "telephone": "+15512928090",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hackensack",
+        "addressRegion": "NJ",
+        "postalCode": "07601",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.8859,
+        "longitude": -74.0434
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.8859,
+          "longitude": -74.0434
+        },
+        "geoRadius": "25000"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Hackensack, NJ"
+        },
+        {
+          "@type": "City",
+          "name": "Lodi, NJ"
+        },
+        {
+          "@type": "City",
+          "name": "Teaneck, NJ"
+        },
+        {
+          "@type": "City",
+          "name": "Maywood, NJ"
+        },
+        {
+          "@type": "City",
+          "name": "South Hackensack, NJ"
+        },
+        {
+          "@type": "Place",
+          "name": "Bergen County, NJ"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+    .service-area-badge {
+        background-color: #ea9e25;
+        color: #fff;
+        border-radius: 30px;
+        padding: 0.3rem 1rem;
+        margin: 0.3rem;
+        display: inline-block;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .service-area-badge:hover, .service-area-badge.active {
+        background-color: #c78314;
+        box-shadow: 0 5px 15px rgba(234, 158, 37, 0.3);
+        transform: translateY(-3px);
+    }
+    
+    #map {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .map-container {
+        position: relative;
+        padding-bottom: 75%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .area-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .area-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .area-card-header {
+        background-color: #ea9e25;
+        color: #fff;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .area-card-header i {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+    
+    .area-card-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    
+    .service-icon-circle {
+        width: 80px;
+        height: 80px;
+        background-color: #ea9e25;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+    }
+    
+    .service-icon-circle i {
+        font-size: 2.5rem;
+    }
+    
+    .testimonial-card {
+        background-color: #f8f9fa;
+        border-left: 4px solid #ea9e25;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+    
+    .testimonial-card::before {
+        content: '\f10d';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: rgba(234, 158, 37, 0.1);
+        font-size: 3rem;
+    }
+    
+    .feature-box {
+        padding: 2rem;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        text-align: center;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-box:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Header Contact Styling */
+    .header-contact-item {
+        font-size: 1.1rem;
+    }
+    .header-highlight {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #ea9e25;
+    }
+    .header-phone {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #ea9e25;
+        transition: all 0.3s ease;
+    }
+    .header-phone:hover {
+        color: #c78000;
+        text-shadow: 0 0 5px rgba(234, 158, 37, 0.3);
+        transform: scale(1.05);
+    }
+
+    /* Update CSS for the mobile header layout changes */
+    @media (max-width: 991px) {
+        header .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .mobile-nav-toggle {
+            order: 3;
+            margin-left: 10px;
+        }
+        
+        .logo {
+            order: 1;
+            margin: 0;
+            max-width: 40%;
+        }
+        
+        .logo img {
+            max-width: 100%;
+        }
+        
+        .mobile-header-phone {
+            order: 2;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+        
+        .mobile-header-phone a {
+            display: flex;
+            align-items: center;
+            color: #ea9e25;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 0.5rem;
+        }
+        
+        .mobile-header-phone i {
+            margin-right: 0.3rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Hide header contact items on mobile since we have the new phone display */
+        .header-contact {
+            display: none;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .mobile-header-phone {
+            display: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPQFMXP9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png" alt="Royal Locksmith" class="site-logo">
+                </a>
+            </div>
+            
+            <!-- Mobile Header Phone -->
+            <div class="mobile-header-phone">
+                <a href="tel:5512928090">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>(551) 292-8090</span>
+                </a>
+            </div>
+            
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="areas.html" class="active">Service Areas</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Header Contact Info (hidden on mobile) -->
+            <div class="header-contact">
+                <div class="header-contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="header-highlight">24/7 Service</span>
+                </div>
+                <div class="header-contact-item phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span><a href="tel:5512928090" class="header-phone">(551) 292-8090</a></span>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero page-hero" data-unsplash="locksmith,map,security" data-size="1600x600">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content">
+                        <h1>Professional Locksmith Services in Bergen County</h1>
+                        <p class="lead">Trusted Security Solutions for Hackensack, Lodi, Teaneck, Maywood & South Hackensack</p>
+                        <ul class="hero-features d-flex justify-content-center flex-wrap">
+                            <li><i class="fas fa-check-circle"></i> 24/7 Mobile Service</li>
+                            <li><i class="fas fa-check-circle"></i> Licensed & Insured (#13VH13550300)</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Satisfaction Guarantee</li>
+                        </ul>
+                        <div class="cta-buttons">
+                            <a href="tel:5512928090" class="btn btn-primary btn-lg"><i class="fas fa-phone-alt me-2"></i> Call Now</a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg"><i class="fas fa-calendar-alt me-2"></i> Schedule Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area Overview Section -->
+    <section class="area-overview py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title">Your Local Locksmith in Bergen County</h2>
+                    <p class="lead">Royal Locksmith proudly serves residential, commercial, and automotive customers throughout these Bergen County communities with prompt, professional security solutions.</p>
+                    
+                    <div class="d-flex flex-wrap justify-content-center mt-4">
+                        <span class="service-area-badge" id="hackensack-badge" onclick="highlightCity('hackensack')"><i class="fas fa-map-marker-alt me-2"></i> Hackensack, NJ</span>
+                        <span class="service-area-badge" id="lodi-badge" onclick="highlightCity('lodi')"><i class="fas fa-map-marker-alt me-2"></i> Lodi, NJ</span>
+                        <span class="service-area-badge" id="teaneck-badge" onclick="highlightCity('teaneck')"><i class="fas fa-map-marker-alt me-2"></i> Teaneck, NJ</span>
+                        <span class="service-area-badge" id="maywood-badge" onclick="highlightCity('maywood')"><i class="fas fa-map-marker-alt me-2"></i> Maywood, NJ</span>
+                        <span class="service-area-badge" id="south-hackensack-badge" onclick="highlightCity('south-hackensack')"><i class="fas fa-map-marker-alt me-2"></i> South Hackensack, NJ</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="area-info p-4">
+                        <h3 class="mb-4"><i class="fas fa-shield-alt me-2" style="color: #ea9e25;"></i> Complete Locksmith Coverage</h3>
+                        
+                        <div class="area-info-item d-flex mb-4">
+                            <div class="icon-wrapper me-3">
+                                <i class="fas fa-home" style="color: #ea9e25; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5">Residential Services</h4>
+                                <p>Home lockouts, lock replacement, rekeying, high-security locks, smart locks, and master key systems for your home.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="area-info-item d-flex mb-4">
+                            <div class="icon-wrapper me-3">
+                                <i class="fas fa-building" style="color: #ea9e25; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5">Commercial Solutions</h4>
+                                <p>Business security systems, access control, master key systems, panic bars, door closers, and high-security locks.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="area-info-item d-flex mb-4">
+                            <div class="icon-wrapper me-3">
+                                <i class="fas fa-car" style="color: #ea9e25; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5">Automotive Locksmith</h4>
+                                <p>Car lockouts, key duplication, transponder key programming, ignition repair, and broken key extraction services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="area-info-item d-flex">
+                            <div class="icon-wrapper me-3">
+                                <i class="fas fa-exclamation-circle" style="color: #ea9e25; font-size: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <h4 class="h5">24/7 Emergency Service</h4>
+                                <p>We're available around the clock for emergency lockouts and urgent security needs in all our service areas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Service Areas -->
+    <section class="featured-areas py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Our Service Areas</h2>
+                    <p class="lead">Expert locksmith services throughout Bergen County's most vibrant communities</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Hackensack Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card area-card h-100">
+                        <div class="area-card-header">
+                            <i class="fas fa-building"></i>
+                            <h3>Hackensack, NJ</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>As our home base, we provide comprehensive locksmith services throughout Hackensack for homes, businesses, and vehicles. From downtown commercial properties to residential neighborhoods, we deliver expert security solutions.</p>
+                            
+                            <h4 class="h5 mt-4 mb-3">Popular Services in Hackensack:</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> High-security lock installation</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Commercial access control systems</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Residential lock rekeying</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Automotive key programming</li>
+                            </ul>
+                            
+                            <div class="text-center mt-4">
+                                <a href="contact.html" class="btn btn-outline-secondary">Request Service in Hackensack</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lodi Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card area-card h-100">
+                        <div class="area-card-header">
+                            <i class="fas fa-home"></i>
+                            <h3>Lodi, NJ</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>We provide dedicated locksmith services to both residential and commercial customers throughout Lodi. Our mobile locksmith vans ensure we can respond to security needs across the community quickly and efficiently.</p>
+                            
+                            <h4 class="h5 mt-4 mb-3">Popular Services in Lodi:</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Smart lock installation</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Emergency lockout assistance</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Master key system design</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Car key replacement</li>
+                            </ul>
+                            
+                            <div class="text-center mt-4">
+                                <a href="contact.html" class="btn btn-outline-secondary">Request Service in Lodi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Teaneck Card -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card area-card h-100">
+                        <div class="area-card-header">
+                            <i class="fas fa-store"></i>
+                            <h3>Teaneck, NJ</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Serving Teaneck's diverse neighborhoods with specialized residential and commercial locksmith services. Our technicians are familiar with the unique security needs of Teaneck's historic homes and modern businesses.</p>
+                            
+                            <h4 class="h5 mt-4 mb-3">Popular Services in Teaneck:</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Residential security upgrades</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Commercial lock repair</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Lock changing services</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Broken key extraction</li>
+                            </ul>
+                            
+                            <div class="text-center mt-4">
+                                <a href="contact.html" class="btn btn-outline-secondary">Request Service in Teaneck</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Maywood Card -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="card area-card h-100">
+                        <div class="area-card-header">
+                            <i class="fas fa-key"></i>
+                            <h3>Maywood, NJ</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Royal Locksmith delivers comprehensive security solutions to Maywood residents and businesses. We understand the unique needs of this community and provide expert service for homes, commercial properties, and vehicles.</p>
+                            
+                            <h4 class="h5 mt-4 mb-3">Popular Services in Maywood:</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Home lock replacement</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Keyless entry system installation</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Emergency lockout assistance</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Transponder key programming</li>
+                            </ul>
+                            
+                            <div class="text-center mt-4">
+                                <a href="contact.html" class="btn btn-outline-secondary">Request Service in Maywood</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- South Hackensack Card -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="card area-card h-100">
+                        <div class="area-card-header">
+                            <i class="fas fa-industry"></i>
+                            <h3>South Hackensack, NJ</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>We offer specialized locksmith services to South Hackensack's residential communities and industrial areas. Our team is equipped to handle security needs for warehouses, distribution centers, and homes throughout the area.</p>
+                            
+                            <h4 class="h5 mt-4 mb-3">Popular Services in South Hackensack:</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Industrial lock systems</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> High-security padlocks</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Commercial door hardware</li>
+                                <li><i class="fas fa-check-circle" style="color: #ea9e25;"></i> Residential security solutions</li>
+                            </ul>
+                            
+                            <div class="text-center mt-4">
+                                <a href="contact.html" class="btn btn-outline-secondary">Request Service in South Hackensack</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">Why Choose Royal Locksmith</h2>
+                    <p class="lead">The trusted security experts throughout Bergen County</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box" style="color: #000;">
+                        <div class="service-icon-circle mb-4">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Licensed & Insured</h3>
+                        <p>We're fully licensed (NJ DCA #13VH13550300) and insured for your complete protection and peace of mind.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box" style="color: #000;">
+                        <div class="service-icon-circle mb-4">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Expert Technicians</h3>
+                        <p>Our skilled locksmiths have extensive training and experience with all types of locks and security systems.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box" style="color: #000;">
+                        <div class="service-icon-circle mb-4">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Mobile Service</h3>
+                        <p>Our fully-equipped mobile workshops come to your location throughout Bergen County.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box" style="color: #000;">
+                        <div class="service-icon-circle mb-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="h4 mb-3">24/7 Availability</h3>
+                        <p>Lock emergencies don't follow a schedule, so we're available around the clock when you need us most.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="lead">Hear from satisfied customers across our service areas</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="mb-2">
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                        </div>
+                        <p class="testimonial-text mb-3">"When I got locked out of my house in Hackensack at night, Royal Locksmith arrived quickly and got me back inside without damaging my door. Their technician was professional and courteous. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <p class="mb-0 fw-bold">Michael S.</p>
+                            <p class="small text-muted">Hackensack, NJ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="mb-2">
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                        </div>
+                        <p class="testimonial-text mb-3">"After moving to Teaneck, we needed all our locks changed. Royal Locksmith installed new high-security deadbolts and even set up a master key system for us. Great service at a reasonable price!"</p>
+                        <div class="testimonial-author">
+                            <p class="mb-0 fw-bold">Jennifer T.</p>
+                            <p class="small text-muted">Teaneck, NJ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="mb-2">
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                        </div>
+                        <p class="testimonial-text mb-3">"I manage a retail store in Lodi and needed our commercial locks upgraded. Royal Locksmith provided excellent advice and installation. Their knowledge about security systems is impressive!"</p>
+                        <div class="testimonial-author">
+                            <p class="mb-0 fw-bold">Robert L.</p>
+                            <p class="small text-muted">Lodi, NJ</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="mb-2">
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                            <i class="fas fa-star" style="color: #ea9e25;"></i>
+                        </div>
+                        <p class="testimonial-text mb-3">"Lost my car keys in Maywood and was stranded. Royal Locksmith came out, made a new key and programmed it on the spot. They truly saved my day with their quick response and expertise!"</p>
+                        <div class="testimonial-author">
+                            <p class="mb-0 fw-bold">Sarah M.</p>
+                            <p class="small text-muted">Maywood, NJ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <p class="lead">Common questions about our service areas</p>
+                    </div>
+                    
+                    <div class="accordion" id="areaFaqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="areaFaq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#areaFaqCollapse1" aria-expanded="true" aria-controls="areaFaqCollapse1">
+                                    Do you service areas outside of the listed cities?
+                                </button>
+                            </h3>
+                            <div id="areaFaqCollapse1" class="accordion-collapse collapse show" aria-labelledby="areaFaq1" data-bs-parent="#areaFaqAccordion">
+                                <div class="accordion-body">
+                                    <p>While we focus primarily on Hackensack, Lodi, Teaneck, Maywood, and South Hackensack, we may be able to service other nearby communities in Bergen County. Please contact us directly at (551) 292-8090 to inquire about service availability in your specific location.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="areaFaq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#areaFaqCollapse2" aria-expanded="false" aria-controls="areaFaqCollapse2">
+                                    Is your mobile service available throughout all your service areas?
+                                </button>
+                            </h3>
+                            <div id="areaFaqCollapse2" class="accordion-collapse collapse" aria-labelledby="areaFaq2" data-bs-parent="#areaFaqAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes, our fully-equipped mobile locksmith service is available throughout all our service areas. Our technicians come directly to your location in Hackensack, Lodi, Teaneck, Maywood, or South Hackensack to provide on-site locksmith services for your home, business, or vehicle.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="areaFaq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#areaFaqCollapse3" aria-expanded="false" aria-controls="areaFaqCollapse3">
+                                    Is your 24/7 emergency service available in all listed areas?
+                                </button>
+                            </h3>
+                            <div id="areaFaqCollapse3" class="accordion-collapse collapse" aria-labelledby="areaFaq3" data-bs-parent="#areaFaqAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes, our 24/7 emergency locksmith service is available throughout all our service areas, including Hackensack, Lodi, Teaneck, Maywood, and South Hackensack. Whether you're locked out, need urgent security assistance, or have another lock emergency, we're available around the clock.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <a href="faq.html" class="btn btn-primary">View All FAQs <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section py-5" style="background-color: #333; color: white;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 class="cta-heading">Need a Locksmith in Bergen County?</h2>
+                    <p class="lead mb-4">Our mobile team is ready to serve you in Hackensack, Lodi, Teaneck, Maywood, and South Hackensack</p>
+                    
+                    <div class="d-flex flex-wrap justify-content-center mb-4">
+                        <div class="cta-feature mx-3 mb-3">
+                            <i class="fas fa-check-circle me-2" style="color: #ea9e25;"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="cta-feature mx-3 mb-3">
+                            <i class="fas fa-check-circle me-2" style="color: #ea9e25;"></i>
+                            <span>24/7 Emergency Service</span>
+                        </div>
+                        <div class="cta-feature mx-3 mb-3">
+                            <i class="fas fa-check-circle me-2" style="color: #ea9e25;"></i>
+                            <span>100% Satisfaction Guarantee</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="tel:5512928090" class="btn btn-primary btn-lg me-3 mb-2 mb-sm-0"><i class="fas fa-phone-alt me-2"></i> Call (551) 292-8090</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg"><i class="fas fa-envelope me-2"></i> Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="https://wy0xwo2gftdavwym.public.blob.vercel-storage.com/Full%20Logo%20%28Transparent%29.png" alt="Royal Locksmith" class="footer-logo-img">
+                        </a>
+                    </div>
+                    <p><i class="fas fa-map-marker-alt"></i> Serving Hackensack, NJ & Surrounding Areas</p>
+                    <p><i class="fas fa-id-card"></i> NJ DCA License #13VH13550300</p>
+                    
+                    <div class="footer-emergency">
+                        <h4>Need Emergency Service?</h4>
+                        <a href="tel:5512928090" class="btn btn-primary"><i class="fas fa-phone-alt me-2"></i> Call (551) 292-8090</a>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <h3>Connect With Us</h3>
+                        <div class="footer-social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-yelp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:5512928090">(551) 292-8090</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:support@royallocksmithnj.com">support@royallocksmithnj.com</a></p>
+                    <p><i class="fas fa-clock"></i> Available 24/7</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="areas.html"><i class="fas fa-chevron-right"></i> Service Areas</a></li>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-areas">
+                    <h3>Service Areas</h3>
+                    <p><i class="fas fa-map-pin"></i> Hackensack, NJ</p>
+                    <p><i class="fas fa-map-pin"></i> Lodi, NJ</p>
+                    <p><i class="fas fa-map-pin"></i> Teaneck, NJ</p>
+                    <p><i class="fas fa-map-pin"></i> Maywood, NJ</p>
+                    <p><i class="fas fa-map-pin"></i> South Hackensack, NJ</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Royal Locksmith. All Rights Reserved.</p>
+                <div class="footer-policies">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms and Conditions</a>
+                </div>
+                <p class="footer-credit">Made with <i class="fas fa-heart heart-icon"></i> by <a href="https://gettmarketing.com" target="_blank">Gett Marketing</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="services.html">
+            <i class="fas fa-key"></i>
+            <span>Services</span>
+        </a>
+        <a href="tel:5512928090" class="call-now">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="areas.html" class="active">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Areas</span>
+        </a>
+        <a href="faq.html">
+            <i class="fas fa-question-circle"></i>
+            <span>FAQ</span>
+        </a>
+        <a href="contact.html">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/form-handler.js"></script>
+    <script src="js/script.js"></script>
+    
+    <!-- Fixed CTA Button -->
+    <a href="tel:+15512928090" class="fixed-cta-btn">
+        <i class="fas fa-phone-alt"></i> Call Now
+    </a>
+
+    <!-- Add Google Maps JavaScript with fallback -->
+    <script>
+    // City coordinates
+    const cityCoordinates = {
+        'hackensack': {lat: 40.8859, lng: -74.0434, zoom: 14, label: 'Hackensack'},
+        'lodi': {lat: 40.8732, lng: -74.0835, zoom: 14, label: 'Lodi'},
+        'teaneck': {lat: 40.8848, lng: -74.0168, zoom: 14, label: 'Teaneck'},
+        'maywood': {lat: 40.9037, lng: -74.0632, zoom: 14, label: 'Maywood'},
+        'south-hackensack': {lat: 40.8367, lng: -74.0467, zoom: 14, label: 'South Hackensack'}
+    };
+
+    let map;
+    let markers = {};
+    let currentActiveMarker = null;
+    let currentActiveBadge = null;
+
+    // Direct Google Maps API loading - fallback approach
+    function loadGoogleMapsDirectly() {
+        const API_KEY = 'AIzaSyD3Yz0JL_NHAm3UtT9L8fi6QH6NeEFCOpA'; // Direct key reference as fallback
+        
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        
+        // Add error handling
+        script.onerror = function() {
+            console.error('Google Maps API failed to load');
+            showMapError();
+        };
+        
+        document.head.appendChild(script);
+        console.log('Directly loading Google Maps API');
+    }
+    
+    // Show error in map div
+    function showMapError() {
+        const mapDiv = document.getElementById('map');
+        if (mapDiv) {
+            mapDiv.innerHTML = `
+                <div style="text-align: center; padding: 20px;">
+                    <i class="fas fa-exclamation-circle" style="font-size: 3rem; color: #ea9e25; margin-bottom: 15px;"></i>
+                    <p>We're experiencing issues loading the map. Please try again later.</p>
+                    <p>You can still view our service areas below.</p>
+                </div>
+            `;
+        }
+    }
+
+    // Initialize the map
+    function initMap() {
+        console.log('initMap called');
+        const mapDiv = document.getElementById("map");
+        
+        if (!mapDiv) {
+            console.error('Map container not found');
+            return;
+        }
+        
+        try {
+            // Center on Bergen County initially
+            map = new google.maps.Map(mapDiv, {
+                center: {lat: 40.8859, lng: -74.0434},
+                zoom: 12,
+                mapTypeControl: false,
+                streetViewControl: false,
+                fullscreenControl: true,
+                zoomControl: true,
+            });
+            
+            // Create markers for each city
+            Object.keys(cityCoordinates).forEach(city => {
+                const coords = cityCoordinates[city];
+                
+                // Create marker
+                markers[city] = new google.maps.Marker({
+                    position: {lat: coords.lat, lng: coords.lng},
+                    map: map,
+                    title: coords.label,
+                    animation: google.maps.Animation.DROP,
+                    icon: {
+                        url: 'https://maps.google.com/mapfiles/ms/icons/red-pushpin.png',
+                        scaledSize: new google.maps.Size(32, 32)
+                    }
+                });
+                
+                // Create info window
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `<div style="font-weight: bold; color: #333;">${coords.label}</div>
+                            <div style="margin-top: 5px;">Click to explore services</div>`
+                });
+                
+                // Add click event to marker
+                markers[city].addListener("click", () => {
+                    highlightCity(city);
+                });
+                
+                // Show info window on hover
+                markers[city].addListener("mouseover", () => {
+                    infoWindow.open(map, markers[city]);
+                });
+                
+                markers[city].addListener("mouseout", () => {
+                    infoWindow.close();
+                });
+            });
+            
+            // Initially highlight Hackensack
+            setTimeout(() => {
+                highlightCity('hackensack');
+            }, 500);
+            
+            console.log('Map initialized successfully');
+        } catch (error) {
+            console.error('Error initializing map:', error);
+            showMapError();
+        }
+    }
+
+    // Highlight selected city
+    function highlightCity(city) {
+        // Reset any previously active badge
+        if (currentActiveBadge) {
+            currentActiveBadge.classList.remove('active');
+        }
+        
+        // Add active class to clicked badge
+        currentActiveBadge = document.getElementById(`${city}-badge`);
+        if (currentActiveBadge) {
+            currentActiveBadge.classList.add('active');
+        }
+        
+        // Get city coordinates
+        const coords = cityCoordinates[city];
+        
+        // Center and zoom the map
+        map.panTo({lat: coords.lat, lng: coords.lng});
+        map.setZoom(coords.zoom);
+        
+        // Animate marker
+        if (currentActiveMarker) {
+            // Reset previous marker
+            currentActiveMarker.setAnimation(null);
+            currentActiveMarker.setIcon({
+                url: 'https://maps.google.com/mapfiles/ms/icons/red-pushpin.png',
+                scaledSize: new google.maps.Size(32, 32)
+            });
+        }
+        
+        // Highlight new marker
+        currentActiveMarker = markers[city];
+        currentActiveMarker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(() => {
+            currentActiveMarker.setAnimation(null);
+        }, 1500);
+        
+        // Make active marker larger and more prominent
+        currentActiveMarker.setIcon({
+            url: 'https://maps.google.com/mapfiles/ms/icons/red-pushpin.png',
+            scaledSize: new google.maps.Size(32, 32)
+        });
+        
+        // Scroll to the corresponding service area card if on mobile
+        if (window.innerWidth < 768) {
+            const cardElements = document.querySelectorAll('.area-card h3');
+            let targetCard = null;
+            
+            cardElements.forEach(element => {
+                if (element.textContent.includes(coords.label)) {
+                    targetCard = element.closest('.area-card');
+                }
+            });
+            
+            if (targetCard) {
+                setTimeout(() => {
+                    targetCard.scrollIntoView({behavior: 'smooth'});
+                }, 800);
+            }
+        }
+    }
+
+    // Load maps when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded - initializing maps');
+        
+        // Try to use the config method first
+        if (typeof window.RoyalLocksmithConfig !== 'undefined' && 
+            typeof window.RoyalLocksmithConfig.loadGoogleMapsApi === 'function') {
+            console.log('Using RoyalLocksmithConfig to load maps');
+            window.RoyalLocksmithConfig.loadGoogleMapsApi('initMap');
+            
+            // Set up a fallback timer in case the config method fails
+            setTimeout(() => {
+                if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
+                    console.log('Config method timed out, using direct loading');
+                    loadGoogleMapsDirectly();
+                }
+            }, 3000);
+        } else {
+            // Fallback to direct loading if config is not available
+            console.log('Config not available, using direct loading');
+            loadGoogleMapsDirectly();
+        }
+    });
+    </script>
+</body>
+</html> 

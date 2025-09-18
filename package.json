@@ -1,0 +1,20 @@
+{
+  "name": "royal-locksmith",
+  "version": "1.0.0",
+  "description": "Royal Locksmith website with form submission and email notifications",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "resend": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+} 
